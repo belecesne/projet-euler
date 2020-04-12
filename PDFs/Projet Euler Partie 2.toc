@@ -1,7 +1,0 @@
-\babel@toc {french}{}
-\contentsline {section}{\numberline {1}Rappels de nos objectifs}{1}{section.1}% 
-\contentsline {section}{\numberline {2}Comment trouver les bornes de recherche ?}{1}{section.2}% 
-\contentsline {subsection}{\numberline {2.1}Comment borner a ?}{1}{subsection.2.1}% 
-\contentsline {subsection}{\numberline {2.2}Comment borner b ?}{2}{subsection.2.2}% 
-\contentsline {section}{\numberline {3}Optimisation de la fonction qui calcule la somme des chiffres d'un nombre ?}{2}{section.3}% 
-\contentsline {section}{\numberline {4}Comment d\IeC {\'e}terminer vMax ?}{2}{section.4}% 
