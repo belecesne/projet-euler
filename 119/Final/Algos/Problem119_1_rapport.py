@@ -2,7 +2,9 @@ from math import floor
 import time
 
 def sommeChiffreNombre(nombre):
-    '''Renvoie la somme des chiffres du nombre passé en paramètres'''
+    """
+    Renvoie la somme des chiffres du nombre passé en paramètres
+    """
     somme = 0
     while (nombre != 0):
         somme += nombre%10
@@ -11,7 +13,9 @@ def sommeChiffreNombre(nombre):
 
 
 def A(n):
-    """Retourne le n-ème terme répondant aux critères du problème"""
+    """
+    Retourne le n-ème terme répondant aux critères du problème
+    """
     index = 0
     nombreAct = 10
     valeurRetournee = 0

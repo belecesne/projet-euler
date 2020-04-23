@@ -1,4 +1,4 @@
-Algorithme : Projet Euler, Probleme 119, Premiere Methode
+Algorithme : Projet Euler, Problème 119, Première Méthode
 Type de Retour : Nombre
 Arguments : Nombre n
 

@@ -1,12 +1,17 @@
 from math import floor, log, exp, ceil
-import time, sys
+import time
 
-#Renvoie la somme des chiffres qui composent un nombre
 def sommeChiffreNombre(nombre):
+    """
+    Renvoie la somme des chiffres du nombre passé en paramètres
+    """
     return sum([ int(c) for c in str(nombre) ])
 
 
 def A(n, vMax):
+    """
+    Retourne le n-ème terme répondant aux critères du problème
+    """
     vMaxOrigine = vMax
     listeNombre = []
     arret = 2
@@ -26,7 +31,7 @@ def A(n, vMax):
             listeArret[a] = arret
             for b in range(debut, arret):
                 value = a**b
-                if sommeChiffreNombre(value) == a:   # Si b est la somme des chiffres de value alors value est un des nombres qui nous intéresse
+                if sommeChiffreNombre(value) == a:
                     listeNombre.append(value)
             a += 1
         vMax *= 5**ceil((n - len(listeNombre))/2)
@@ -39,12 +44,3 @@ vTeste = int(input("Rentrez votre 'vMax' : "))
 begin = time.time()
 print("Résultat au problème 119 avec", nbTeste, "comme entrée :", A(nbTeste, vTeste))
 print(f"Duration = {time.time() - begin} seconds to complete.")
-
-
-'''
-for nbTeste in range(1, 31):
-    begin = time.time()
-    print("Résultat au problème 119 avec", nbTeste, "comme entrée :", A(nbTeste, vTeste))
-    print(f"Duration = {time.time() - begin} seconds to complete.")
-    print("#"*30)
-'''
