@@ -39,3 +39,12 @@ vTeste = int(input("Rentrez votre 'vMax' : "))
 begin = time.time()
 print("Résultat au problème 119 avec", nbTeste, "comme entrée :", A(nbTeste, vTeste))
 print(f"Duration = {time.time() - begin} seconds to complete.")
+
+
+'''
+for nbTeste in range(1, 31):
+    begin = time.time()
+    print("Résultat au problème 119 avec", nbTeste, "comme entrée :", A(nbTeste, vTeste))
+    print(f"Duration = {time.time() - begin} seconds to complete.")
+    print("#"*30)
+'''
