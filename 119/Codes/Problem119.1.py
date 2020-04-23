@@ -1,4 +1,5 @@
 from math import floor
+import time
 
 #Renvoie la somme des chiffres qui composent un nombre
 def sommeChiffreNombre(nombre):
@@ -7,6 +8,7 @@ def sommeChiffreNombre(nombre):
         somme += nombre%10
         nombre=floor(nombre/10)
     return somme
+
 
 def A(max):
     index = 0
@@ -28,4 +30,9 @@ def A(max):
         nombreAct += 1
     return valeurRetournee
 
-print(A(1))
+
+for nbTeste in range(1,30):
+    begin = time.time()
+    print("Résultat au problème 119 avec", nbTeste, "comme entrée :", A(nbTeste))
+    print(f"Duration = {time.time() - begin} seconds to complete.")
+    print("#"*30)
