@@ -13,6 +13,7 @@ def sommeChiffreNombre(nombre):
 def A(max):
     index = 0
     nombreAct = 10
+    valeurRetournee = 0
     while index != max:
         decomposition = sommeChiffreNombre(nombreAct)
         k = 2
@@ -21,12 +22,13 @@ def A(max):
                 puiss = decomposition**k
                 if puiss == nombreAct:
                     index += 1
+                    valeurRetournee = nombreAct
                     break
-                elif puiss > nombreAct:
+                if puiss > nombreAct:
                     break
                 k += 1
         nombreAct += 1
-    return puiss
+    return valeurRetournee
 
 
 for nbTeste in range(1,30):
