@@ -73,11 +73,11 @@ Le problème 119 du Projet Euler consiste à trouver le 30ème nombre tel que la
 
 \subsubsection{Méthode itérative}
 
-\paragraph{Algorithme de principe}
+\subsubsubsection{Algorithme de principe}
 \bigbreak
 \code{1}{8}{problem119_1_principe.txt}
 
-\paragraph{Développement}
+\subsubsubsection{Développement}
 \bigbreak
 Une première méthode pour calculer la somme des chiffres d'un nombre consiste à récupérer le reste de la division du nombre par 10, de l'ajouter à la somme puis faire la division entière de notre nombre par 10 et répéter ceci jusqu'à ce qu'il soit égal à 0. Par exemple, pour 614 656, le reste de $614656/10$ est 6 et la division entière de 614 656 par 10 donne 61 465. Ensuite le reste de $61465/10$ est 5. Ainsi de suite, on obtient $6 + 5 + 6 + 4 + 1 + 6$. Ici, on divise 6 par 10, ce qui donne 0 et qui cause la sortie de la boucle. On a donc bien obtenu la somme des chiffres de 614 656.
 
