@@ -1,0 +1,13 @@
+Algorithme : Projet Euler, Probleme 119, Seconde Methode
+Type de Retour : Nombre
+Arguments : Nombre n
+
+pour a allant de 2 a 400:
+    pour b allant de 2 a 50:
+        value := a ** b
+        si sommeChiffreNombre(value) = a:
+            ajouter value dans liste
+trier liste
+retourner liste[n - 1]
+
+
