@@ -1,0 +1,19 @@
+vMaxOrigine := vMax, listeNombre := [], arret := 2, aMax := 2, listeArret := {}
+tant que longueurDe(listeNombre) < n:
+    a := 2, aAv := aMax, aMax = exp(log(vMax)/2)
+    tant que a < aMax:
+        si a >= aAv:
+            debut := 2
+        sinon:
+            debut := listeArret[a]
+        value := a
+        arret := floor(log(vMax) / log(a))+1
+        listeArret[a] = arret
+        Pour b de debut à arret:
+            value = a ** b
+                si sommeChiffreNombre(value) == a:   # Si b est la somme des chiffres de value alors value est un des nombres qui nous intéresse
+                    ajouter value à listeNombre
+            a := a + 1
+        vMax = vMax * 5**ceil((n - len(listeNombre))/2)
+    trier listeNombre
+    retourner listeNombre[n-1]
