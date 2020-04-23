@@ -1,8 +1,8 @@
 from math import floor
 import time
 
-#Renvoie la somme des chiffres qui composent un nombre
 def sommeChiffreNombre(nombre):
+    '''Renvoie la somme des chiffres du nombre passé en paramètres'''
     somme = 0
     while (nombre != 0):
         somme += nombre%10
@@ -10,11 +10,12 @@ def sommeChiffreNombre(nombre):
     return somme
 
 
-def A(max):
+def A(n):
+    """Retourne le n-ème terme répondant aux critères du problème"""
     index = 0
     nombreAct = 10
     valeurRetournee = 0
-    while index != max:
+    while index != n:
         decomposition = sommeChiffreNombre(nombreAct)
         k = 2
         if decomposition != 1:
@@ -31,8 +32,8 @@ def A(max):
     return valeurRetournee
 
 
-for nbTeste in range(1,30):
-    begin = time.time()
-    print("Résultat au problème 119 avec", nbTeste, "comme entrée :", A(nbTeste))
-    print(f"Duration = {time.time() - begin} seconds to complete.")
-    print("#"*30)
+
+nbTeste = int(input("Rentrez le n-ème terme recherché : "))
+begin = time.time()
+print("Résultat au problème 119 avec", nbTeste, "comme entrée :", A(nbTeste))
+print(f"Duration = {time.time() - begin} seconds to complete.")
