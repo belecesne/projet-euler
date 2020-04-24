@@ -5,34 +5,32 @@ def sommeChiffreNombre(nombre):
     """
     Renvoie la somme des chiffres du nombre passé en paramètres
     """
-    return sum([ int(c) for c in str(nombre) ])    # transforme le nombre en chaîne de caractères pour en faire la somme
-                                                   # de ses caractères
+    return sum([ int(c) for c in str(nombre) ])
 
 
 def A(n, vMax):
     """
     Retourne le n-ème terme répondant aux critères du problème
     """
-    vMaxOrigine = vMax
     listeNombre = []
-    arret = 2
-    aMax = 2
-    listeArret = {}
+    bMaximum = 2
+    aMaximum = 2
+    listebMaximum = {}
     while len(listeNombre) < n:
         a = 2
-        aAv = aMax
-        aMax = exp(log(vMax)/2)
-        while a < aMax:
-            if a >= aAv:
-                debut = 2
+        aPrevious = aMaximum
+        aMaximum = exp(log(vMax)/2)
+        while a < aMaximum:
+            if a >= aPrevious:
+                bMinimum = 2
             else:
-                debut = listeArret[a]
+                bMinimum = listebMaximum[a]
             value = a
-            arret = floor(log(vMax) / log(a))+1
-            listeArret[a] = arret
-            for b in range(debut, arret):
+            bMaximum = floor(log(vMax) / log(a))+1
+            listebMaximum[a] = bMaximum
+            for b in range(bMinimum, bMaximum):
                 value = a**b
-                if sommeChiffreNombre(value) == a:   # Si b est la somme des chiffres de value alors value est un des nombres qui nous intéresse
+                if sommeChiffreNombre(value) == a:
                     listeNombre.append(value)
             a += 1
         vMax *= 5**ceil((n - len(listeNombre))/2)
