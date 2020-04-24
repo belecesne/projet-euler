@@ -2,13 +2,13 @@ Algorithme : Projet Euler, Problème 117, Méthode récursive
 Type de Retour : Nombre
 Paramètres : Nombre n
 
-si n == 5:
+si n = 5:
     retourner 15
-si n == 4:
+si n = 4:
     retourner 8
-si n == 3:
+si n = 3:
     retourner 4
-si n == 2:
+si n = 2:
     retourner 2
 
 retourner Méthode récursive(n - 1) + Méthode récursive(n - 2) + Méthode récursive(n - 3) + Méthode récursive(n - 4)
