@@ -1,4 +1,8 @@
 def recursive(n):    # 1ère méthode
+    '''
+    :param n: nombre de cases à remplir
+    :return: nombre de possibilités pour remplir n-cases
+    '''
     if n == 5:       # 4 cas d'arrêts : 5, 4, 3 et 2 dont on connait les résultats
         return 15
     if n == 4:
