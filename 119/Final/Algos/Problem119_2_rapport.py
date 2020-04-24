@@ -25,7 +25,6 @@ def A(n, vMax):
                 bMinimum = 2
             else:
                 bMinimum = listebMaximum[a]
-            value = a
             bMaximum = floor(log(vMax) / log(a))+1
             listebMaximum[a] = bMaximum
             for b in range(bMinimum, bMaximum):

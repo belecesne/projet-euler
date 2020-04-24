@@ -5,8 +5,8 @@ def sommeChiffreNombre(nombre):
     """
     Renvoie la somme des chiffres du nombre passé en paramètres
     """
-    return sum([ int(c) for c in str(nombre) ])    # transforme le nombre en chaîne de caractères pour en faire la somme
-                                                   # de ses caractères
+    return sum([ int(c) for c in str(nombre) ])        # transforme le nombre en chaîne de caractères pour en faire la somme
+                                                       # de ses caractères
 
 
 def A(n, vMax):
@@ -17,7 +17,7 @@ def A(n, vMax):
     bMaximum = 2
     aMaximum = 2
     listebMaximum = {}
-    while len(listeNombre) < n:                                 # tant qu'on a pas trouvé le nombre que l'on recherche
+    while len(listeNombre) < n:                        # tant qu'on a pas trouvé le nombre que l'on recherche
     '''
     aPrevious, aMaximum, bMinimum, bMaximum et listebMaximum sont des outils nous permettant d'incrémenter vMax sans avoir à tout re-tester. En effet lorsque vMax est changé il faut retester sur les anciens a, les nouvelles puissances. Cependant sur les nouveaux a il faut tester toutes les puissances possibles. C'est pourquoi nous avons besoin de ces outils. Il n'est donc pas nécessaire ici d'expliquer en détail comment ils sont manipulés. Ainsi, nous ne détaillerons pas les opérations impliquant ces variables.
     '''
@@ -29,7 +29,6 @@ def A(n, vMax):
                 bMinimum = 2
             else:
                 bMinimum = listebMaximum[a]
-            value = a
             bMaximum = floor(log(vMax) / log(a))+1     # on borne b (les puissances) en fonction de a
             listebMaximum[a] = bMaximum
             for b in range(bMinimum, bMaximum):        # ainsi pour chaque a on fait varier les puissances
