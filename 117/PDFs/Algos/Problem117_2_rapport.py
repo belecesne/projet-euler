@@ -1,3 +1,5 @@
+import time
+
 def tetranacci(n):
     '''
     :param n: nombre de cases à remplir
@@ -8,4 +10,7 @@ def tetranacci(n):
         l.append(l[i - 4] + l[i - 3] + l[i - 2] + l[i - 1])
     return l[n + 3]
 
-print(tetranacci(50))
+nbTeste = int(input("Rentrez le nombre de case disponible : "))
+begin = time.time()
+print("Résultat au problème 117 avec", nbTeste, "comme entrée :", tetranacci(nbTeste))
+print(f"Duration = {time.time() - begin} seconds to complete.")
