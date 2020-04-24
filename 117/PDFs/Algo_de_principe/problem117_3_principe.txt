@@ -3,6 +3,7 @@ Type de Retour : Nombre
 Paramètres : Nombre n
 
 a := 0, b := 0, c := 0, d := 1
-Pour i allant de 0 à n - 1:
+Pour i allant de 0 à n:
     d := a + b + c + d, a := b, b := c, c := d
+
 retourner d
