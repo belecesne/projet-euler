@@ -5,7 +5,8 @@ def sommeChiffreNombre(nombre):
     """
     Renvoie la somme des chiffres du nombre passé en paramètres
     """
-    return sum([ int(c) for c in str(nombre) ])
+    return sum([ int(c) for c in str(nombre) ])    # transforme le nombre en chaîne de caractères pour en faire la somme
+                                                   # de ses caractères
 
 
 def A(n, vMax):

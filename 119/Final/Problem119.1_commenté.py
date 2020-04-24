@@ -6,9 +6,9 @@ def sommeChiffreNombre(nombre):
     Renvoie la somme des chiffres du nombre passé en paramètres
     """
     somme = 0
-    while (nombre != 0):
-        somme += nombre%10
-        nombre=floor(nombre/10)
+    while (nombre != 0):            # tant qu'il reste des chiffres à ajouter à la somme
+        somme += nombre%10          # on ajoute le dernier chiffre
+        nombre=floor(nombre/10)     # puis on l'enlève du nombre
     return somme
 
 
@@ -19,7 +19,7 @@ def A(max):
     index = 0
     nombreAct = 10
     valeurRetournee = 0
-    while index != max:
+    while index != max:       # tant qu'on a pas trouvé le nombre que l'on recherche
         decomposition = sommeChiffreNombre(nombreAct)
         k = 2
         if decomposition != 1:
