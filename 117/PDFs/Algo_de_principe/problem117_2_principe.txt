@@ -1,1 +1,8 @@
-2
+Algorithme : Projet Euler, Problème 117, Méthode tetranacci
+Type de Retour : Nombre
+Paramètres : Nombre n
+
+liste = [0, 0, 0, 1]
+Pour i allant de 4 à n + 3:
+    ajouter (liste[i-4] + liste[i-3] + liste[i-2] + liste[i-1]) à liste
+retourner liste[n+3]
