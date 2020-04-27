@@ -1,3 +1,5 @@
+import time
+
 def recursive(n):    # 1ère méthode
     '''
     :param n: nombre de cases à remplir
