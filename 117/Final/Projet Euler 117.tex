@@ -37,7 +37,7 @@
 \definecolor{darkWhite}{rgb}{0.92,0.92,0.92}
 
 \lstset{frame=single,
-  language=C,
+  language=Python,
   showstringspaces=false,
   columns=flexible,
   backgroundcolor=\color{darkWhite},
@@ -92,11 +92,10 @@ Le but de problème est de déterminer combien il y a de possibilités de rempli
 
 \subsection{Première méthode (méthode récursive)}
 
-\subsubsection{Algorithme de principe}
-
 Cet algorithme prend en entrée un entier $n$ (représentant le nombre de cases à remplir), et retourne le nombre de possibilités de remplir les n cases, en respectant les contraintes du problème. Il s'effectue de manière récursive. Pour exemple en rentrant 5, le programme renvoie 15.
 
-\bigbreak
+\subsubsection{Algorithme de principe}
+
 \lstinputlisting[language=bash]{Algo_de_principe/problem117_1_principe.txt}
 
 \subsubsection{Développement}
@@ -105,10 +104,10 @@ Dans cette méthode récursive, nous considérons que pour remplir les 50 cases 
 Ceci correspond ainsi à une modélisation de la suite de Tetranacci, une dérivé de la suite de Fibonacci. En effet, si on appelle $F$ la suite de Fibonacci, on sait que $F(n) = F(n-1) + F(n-2)$. Ici, on remarque que $recursive(n) = recursive(n-1) + recursive(n-2) + recursive(n-3) + recursive(n-4)$. Ceci correspond à une suite où chaque terme est la somme des 4 précédents, la suite de tetranacci. Malheureusement, cette méthode est beaucoup trop longue, comme pour Fibonacci. En prenant 50 comme entrée, elle doit faire un nombre incalculable d'appels récursifs. Il faut donc la modifier pour ne plus faire appels à la fonction plusieurs fois avec la même entrée. En effet, ici, on appelle plusieurs fois la même fonction avec le même argument. Par exemple, en partant de 50, on l'appelle avec 49, 48, 47 et 46. Mais avec 49, on l'appelle encore avec 48, 47 et 46. Ceci n'est que le début, au total, le programme appelera $recursive(6)$ 1 965 381 541 064 de fois, pour donner un exemple. Il faut donc stocker le résultat de chaque appel pour ne plus avoir à le calculer.
 \subsection{Seconde méthode (méthode tetranacci)}
 
+Cet algorithme prend en entrée un entier $n$ (représentant le nombre de cases à remplir), et retourne le nombre de possibilités de remplir les n cases, en respectant les contraintes du problème. Ici on stocke dans une liste les 4 précédents termes.
+
 \subsubsection{Algorithme de principe}
 
-Cet algorithme prend en entrée un entier $n$ (représentant le nombre de cases à remplir), et retourne le nombre de possibilités de remplir les n cases, en respectant les contraintes du problème. Ici on stocke dans une liste les 4 précédents termes.
-\bigbreak
 \lstinputlisting[language=bash]{Algo_de_principe/problem117_2_principe.txt}
 
 \subsubsection{Développement}
@@ -126,10 +125,10 @@ Après avoir résolu le problème nous nous sommes fixé de nouveau objectifs :
 
 \section{Méthode finale}
 
+Cet algorithme prend en entrée un entier $n$ (représentant le nombre de cases à remplir), et retourne le nombre de possibilités de remplir les n cases, en respectant les contraintes du problème. On reprend le même principe que l'algorithme précédent, mais on stocke les termes précédents dans des variables.
+
 \subsection{Algorithme de principe}
 
-Cet algorithme prend en entrée un entier $n$ (représentant le nombre de cases à remplir), et retourne le nombre de possibilités de remplir les n cases, en respectant les contraintes du problème. On reprend le même principe que l'algorithme précédent, mais on stocke les termes précédents dans des variables.
-\bigbreak
 \lstinputlisting[language=bash]{Algo_de_principe/problem117_3_principe.txt}
 
 \subsection{Développement}
@@ -149,11 +148,21 @@ Afin d'établir la compléxité des méthodes, nous avons établi un graphique d
 \end{center}
 \bigbreak
 
-On observe ainsi que la compléxité de cette méthode est exponentielle,$ O(e^n$). Cela s'explique par le nombre d'appel récursif effectué. On comprend pourquoi elle n'est pas du tout efficace comme méthode de résolution.
+On observe ainsi que la compléxité de cette méthode est exponentielle, $ O(e^n$). Cela s'explique par le nombre d'appel récursif effectué. On comprend pourquoi elle n'est pas du tout efficace comme méthode de résolution.
 
 La compléxité des deux autres méthodes est linéaire, $O(n$), car on effectue $n$ fois les mêmes opérations.
 
 On peut conclure qu'il est impensable d'utiliser la première méthode. Le choix d'utiliser la seconde ou la dernière méthode est en grande partie esthétique, même si la dernière utilise moins de place mémoire.
+
+\newpage
+\part{Nouvelle méthode récursive}
+
+Suite à notre dernier entretien nous avons essayé de refaire une nouvelle méthode récursive. Le problème de notre précédente méthode récursive, était le trop grand nombre d'appels. Pour résoudre ce problème il faudrait pouvoir stocker nos termes d'un appel à un autre. Pour cela on va renvoyer une liste contenant nos 4 termes. Cela va nous permettre de réduire la compléxité. Voici le code : 
+\bigbreak
+\code{Algos/Problem117_4.py}
+\bigbreak
+
+
 
 \newpage
 \part{Annexes}
