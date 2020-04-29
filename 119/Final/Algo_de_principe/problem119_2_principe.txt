@@ -4,7 +4,7 @@ Arguments : Nombre n
 
 pour a allant de 2 à 400:
     pour b allant de 2 à 50:
-        value := a ** b
+        value := a ^ b
         si sommeChiffreNombre(value) = a:
             ajouter value dans liste
 trier liste

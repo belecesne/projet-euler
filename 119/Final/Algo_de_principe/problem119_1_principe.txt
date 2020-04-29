@@ -6,7 +6,7 @@ index := 0
 nombreAct := 10
 tant que index < n:
 	decomposition := sommeChiffreNombre(nombreAct)
-	puiss := decomposition ** k, k = [2, ..., à définir]
+	puiss := decomposition ^ k, k = [2, ..., à définir]
 	si puiss == nombreAct:
 		index := index + 1
 retourner puiss
