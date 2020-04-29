@@ -25,8 +25,7 @@
 \fancyhead[L]{Le Cesne Benjamin - Tardy Luca}
 \fancyhead[R]{Prep'ISIMA / L2 INFO}
 \renewcommand\footrulewidth{0.4pt}
-\fancyfoot[C]{
-\textbf{Page \thepage/8}}
+\fancyfoot[C]{\textbf{Page \thepage/10}}
 \fancyfoot[L]{\textit{Projet - Prep'ISIMA}}
 \fancyfoot[R]{\today}
 
@@ -144,15 +143,17 @@ Afin d'établir la compléxité des méthodes, nous avons établi un graphique d
 
 \bigbreak
 \begin{center}
-\includegraphics[scale = 0.5]{Images/graphique.png}
+\includegraphics[scale = 0.4]{Images/graphique.png}
 \end{center}
 \bigbreak
 
-On observe ainsi que la compléxité de cette méthode est exponentielle, $ O(e^n$). Cela s'explique par le nombre d'appel récursif effectué. On comprend pourquoi elle n'est pas du tout efficace comme méthode de résolution.
-
+On observe ainsi que la compléxité de cette méthode est exponentielle, $ O(e^n$). Cela s'explique par le nombre d'appel récursif effectué. En effet, après une démonstration difficile et qui sort du cadre de ce problème\footnote{Nb : pour plus d'infos sur le calcul de la compléxité, voir https://www.supinfo.com/cours/2ADS/chapitres/02-complexite-algorithmes-recursifs et se renseigner sur les suites récurrentes linéaires homogènes d'ordre quatre}, nous obtenons bien une compléxité exponentielle.
+On comprend ainsi pourquoi elle n'est pas du tout efficace comme méthode de résolution.
+\bigbreak
 La compléxité des deux autres méthodes est linéaire, $O(n$), car on effectue $n$ fois les mêmes opérations.
-
+\bigbreak
 On peut conclure qu'il est impensable d'utiliser la première méthode. Le choix d'utiliser la seconde ou la dernière méthode est en grande partie esthétique, même si la dernière utilise moins de place mémoire.
+\bigbreak
 
 \newpage
 \part{Nouvelle méthode récursive}
@@ -162,7 +163,7 @@ Suite à notre dernier entretien nous avons essayé de refaire une nouvelle mét
 \code{Algos/Problem117_4.py}
 \bigbreak
 
-On voit ici que le principe est similaire à la seconde méthode. \'Etant donné que l'on part de n, que l'on décremente de 1 à chaque fois jusqu'à 0, on fait n appels. La compléxité est donc $O(n)$. On obtient ainsi une méthode récursive, au moins aussi efficace que les méthodes itératives. Cependant on se heurte à un autre problème : les limites de récursions. En effet, en Python comme dans d'autre langages, il existe une limite de récursions possibles. C'est à dire que l'on ne peut pas faire plus de récursion que cette limite. Cette limite est en fait dû à la place en mémoire que prend les récursions. Quand la fonction s'appelle elle même, son état est mis en pause et stocké en mémoire. Dans notre cas, la limite était de 1000 récursion. On ne peut donc pas conclure sur l'efficacité de cette méthode à long terme.
+On voit ici que le principe est similaire à la seconde méthode. \'Etant donné que l'on part de n, que l'on décremente de 1 à chaque fois jusqu'à 0, on fait n appels. La compléxité est donc $O(n)$. On obtient ainsi une méthode récursive, au moins aussi efficace que les méthodes itératives, dont le compléxité est linéaire (et non exponentielle comme la précédente méthode récursive). Cependant on se heurte à un autre problème : les limites de récursions. En effet, en Python comme dans d'autre langages, il existe une limite de récursions possibles. C'est à dire que l'on ne peut pas faire plus de récursion que cette limite. Cette limite est en fait dû à la place en mémoire que prend les récursions. Quand la fonction s'appelle elle même, son état est mis en pause et stocké en mémoire. Dans notre cas, la limite était de 1000 récursion. On ne peut donc pas conclure sur l'efficacité de cette méthode à long terme.
 
 \newpage
 \part{Annexes}
