@@ -2,9 +2,10 @@ from math import floor
 import time
 
 def sommeChiffreNombre(nombre):
-    """
-    Renvoie la somme des chiffres du nombre passé en paramètres
-    """
+    '''
+    :param nombre: nombre à décomposer
+    :return: somme des chiffres de nombre
+    '''
     somme = 0
     while (nombre != 0):            # tant qu'il reste des chiffres à ajouter à la somme
         somme += nombre%10          # on ajoute le dernier chiffre
@@ -13,9 +14,10 @@ def sommeChiffreNombre(nombre):
 
 
 def A(max):
-    """
-    Retourne le n-ème terme répondant aux critères du problème
-    """
+    '''
+    :param max: terme dont on cherche la valeur
+    :return: max-ème terme répondant aux critères du problème
+    '''
     index = 0
     nombreAct = 10
     valeurRetournee = 0

@@ -2,17 +2,20 @@ from math import floor, log, exp, ceil
 import time
 
 def sommeChiffreNombre(nombre):
-    """
-    Renvoie la somme des chiffres du nombre passé en paramètres
-    """
+    '''
+    :param nombre: nombre à décomposer
+    :return: somme des chiffres de nombre
+    '''
     return sum([ int(c) for c in str(nombre) ])        # transforme le nombre en chaîne de caractères pour en faire la somme
                                                        # de ses caractères
 
 
 def A(n, vMax):
-    """
-    Retourne le n-ème terme répondant aux critères du problème
-    """
+    '''
+    :param n: terme dont on cherche la valeur
+    :param vMax: variable permettant de borner a et b
+    :return: n-ème terme répondant aux critères du problème
+    '''
     listeNombre = []
     bMaximum = 2
     aMaximum = 2
