@@ -157,12 +157,12 @@ On peut conclure qu'il est impensable d'utiliser la première méthode. Le choix
 \newpage
 \part{Nouvelle méthode récursive}
 
-Suite à notre dernier entretien nous avons essayé de refaire une nouvelle méthode récursive. Le problème de notre précédente méthode récursive, était le trop grand nombre d'appels. Pour résoudre ce problème il faudrait pouvoir stocker nos termes d'un appel à un autre. Pour cela on va renvoyer une liste contenant nos 4 termes. Cela va nous permettre de réduire la compléxité. Voici le code : 
+Suite à notre dernier entretien nous avons essayé de refaire une nouvelle méthode récursive. Le problème de notre précédente méthode récursive, était le trop grand nombre d'appels. Pour résoudre ce problème il faudrait pouvoir stocker nos termes d'un appel à un autre. Pour cela on va renvoyer une liste contenant nos 4 termes. Cela va nous permettre de réduire la compléxité. Voici le code en Python : 
 \bigbreak
 \code{Algos/Problem117_4.py}
 \bigbreak
 
-On voit ici que le principe est similaire à la seconde méthode. \'Etant donné que l'on part de n, que l'on décremente de 1 à chaque fois jusqu'à 0, on fait n appels. La compléxité est donc $O(n)$.
+On voit ici que le principe est similaire à la seconde méthode. \'Etant donné que l'on part de n, que l'on décremente de 1 à chaque fois jusqu'à 0, on fait n appels. La compléxité est donc $O(n)$. On obtient ainsi une méthode récursive, au moins aussi efficace que les méthodes itératives. Cependant on se heurte à un autre problème : les limites de récursions. En effet, en Python comme dans d'autre langages, il existe une limite de récursions possibles. C'est à dire que l'on ne peut pas faire plus de récursion que cette limite. Cette limite est en fait dû à la place en mémoire que prend les récursions. Quand la fonction s'appelle elle même, son état est mis en pause et stocké en mémoire. Dans notre cas, la limite était de 1000 récursion. On ne peut donc pas conclure sur l'efficacité de cette méthode à long terme.
 
 \newpage
 \part{Annexes}
