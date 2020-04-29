@@ -1,5 +1,3 @@
-import time
-
 def finale(n):
     '''
     :param n: nombre de cases à remplir
@@ -11,6 +9,4 @@ def finale(n):
     return d
 
 nbTeste = int(input("Rentrez le nombre de case disponible : "))
-begin = time.time()
 print("Résultat au problème 117 avec", nbTeste, "comme entrée :", finale(nbTeste))
-print(f"Duration = {time.time() - begin} seconds to complete.")

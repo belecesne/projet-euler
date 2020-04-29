@@ -1,5 +1,3 @@
-import time
-
 def tetranacci(n):
     '''
     :param n: nombre de cases à remplir
@@ -11,6 +9,4 @@ def tetranacci(n):
     return l[n + 3]
 
 nbTeste = int(input("Rentrez le nombre de case disponible : "))
-begin = time.time()
 print("Résultat au problème 117 avec", nbTeste, "comme entrée :", tetranacci(nbTeste))
-print(f"Duration = {time.time() - begin} seconds to complete.")

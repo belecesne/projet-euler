@@ -1,5 +1,3 @@
-import time
-
 def recursive(n):
     '''
     :param n: nombre de cases à remplir
@@ -16,6 +14,4 @@ def recursive(n):
     return recursive(n - 1) + recursive(n - 2) + recursive(n - 3) + recursive(n - 4)
 
 nbTeste = int(input("Rentrez le nombre de case disponible : "))
-begin = time.time()
 print("Résultat au problème 117 avec", nbTeste, "comme entrée :", recursive(nbTeste))
-print(f"Duration = {time.time() - begin} seconds to complete.")

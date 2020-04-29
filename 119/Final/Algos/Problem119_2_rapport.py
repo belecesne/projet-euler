@@ -1,5 +1,4 @@
 from math import floor, log, exp, ceil
-import time
 
 def sommeChiffreNombre(nombre):
     '''
@@ -7,7 +6,6 @@ def sommeChiffreNombre(nombre):
     :return: somme des chiffres de nombre
     '''
     return sum([ int(c) for c in str(nombre) ])
-
 
 def A(n, vMax):
     '''
@@ -39,9 +37,6 @@ def A(n, vMax):
     listeNombre.sort()
     return listeNombre[n-1]
 
-
 nbTeste = int(input("Rentrez le n-ème terme que vous souhaitez obtenir : "))
 vTeste = int(input("Rentrez votre 'vMax' : "))
-begin = time.time()
 print("Résultat au problème 119 avec", nbTeste, "comme entrée :", A(nbTeste, vTeste))
-print(f"Duration = {time.time() - begin} seconds to complete.")

@@ -1,5 +1,4 @@
 from math import floor
-import time
 
 def sommeChiffreNombre(nombre):
     '''
@@ -11,7 +10,6 @@ def sommeChiffreNombre(nombre):
         somme += nombre%10
         nombre=floor(nombre/10)
     return somme
-
 
 def A(n):
     '''
@@ -37,9 +35,5 @@ def A(n):
         nombreAct += 1
     return valeurRetournee
 
-
-
 nbTeste = int(input("Rentrez le n-ème terme recherché : "))
-begin = time.time()
 print("Résultat au problème 119 avec", nbTeste, "comme entrée :", A(nbTeste))
-print(f"Duration = {time.time() - begin} seconds to complete.")

@@ -21,9 +21,9 @@ def A(n, vMax):
     aMaximum = 2
     listebMaximum = {}
     while len(listeNombre) < n:                        # tant qu'on a pas trouvé le nombre que l'on recherche
-    '''
-    aPrevious, aMaximum, bMinimum, bMaximum et listebMaximum sont des outils nous permettant d'incrémenter vMax sans avoir à tout re-tester. En effet lorsque vMax est changé il faut retester sur les anciens a, les nouvelles puissances. Cependant sur les nouveaux a il faut tester toutes les puissances possibles. C'est pourquoi nous avons besoin de ces outils. Il n'est donc pas nécessaire ici d'expliquer en détail comment ils sont manipulés. Ainsi, nous ne détaillerons pas les opérations impliquant ces variables.
-    '''
+        '''
+        aPrevious, aMaximum, bMinimum, bMaximum et listebMaximum sont des outils nous permettant d'incrémenter vMax sans avoir à tout re-tester. En effet lorsque vMax est changé il faut retester sur les anciens a, les nouvelles puissances. Cependant sur les nouveaux a il faut tester toutes les puissances possibles. C'est pourquoi nous avons besoin de ces outils. Il n'est donc pas nécessaire ici d'expliquer en détail comment ils sont manipulés. Ainsi, nous ne détaillerons pas les opérations impliquant ces variables.
+        '''
         a = 2
         aPrevious = aMaximum
         aMaximum = exp(log(vMax)/2)                    # on borne a grâce à la valeur minimum que b peut prendre (2) et grâce à vMax
