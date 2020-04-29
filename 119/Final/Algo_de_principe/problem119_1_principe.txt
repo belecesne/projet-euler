@@ -1,5 +1,5 @@
 Algorithme : Projet Euler, Problème 119, Première Méthode
-Type de Retour : Nombre
+Type de Retour : Nombre, n-ème nombre dont la somme de ses chiffres élevé à une certaine puissance est égale à lui-même
 Arguments : Nombre n
 
 index := 0

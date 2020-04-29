@@ -1,5 +1,5 @@
-Algorithme : Projet Euler, Problème 119, SommeChiffreNombre
-Type de retour : Nombre
+Algorithme : Projet Euler, Problème 119, Fonction SommeChiffreNombre
+Type de retour : Nombre, somme des chiffres de n
 Argument : Nombre n
 
 somme := 0
