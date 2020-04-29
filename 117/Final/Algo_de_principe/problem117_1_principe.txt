@@ -1,6 +1,6 @@
 Algorithme : Projet Euler, Problème 117, Méthode récursive
-Type de Retour : Nombre
-Paramètres : Nombre n
+Paramètres : Nombre n -> le nombre de cases à remplir.
+Type de Retour : Nombre -> le nombre de façon de remplir les n cases.
 
 si n = 5:
     retourner 15

@@ -52,13 +52,14 @@
   breaklines=true,
   breakatwhitespace=true,
   tabsize=2,
-  literate=%
+  literate=
   {à}{{\`a }}1
   {é}{{\'e}}1
   {è}{{\`e}}1
   {ê}{{\^e}}1
   {ù}{{\`u}}1
   {î}{{\^i}}1
+  {ç}{{\c{c}}}1
 }
 
 
@@ -76,18 +77,26 @@
 \part {Résolution du problème}
 \section {Présentation}
 
-Dans ce problème, il faut trouver combien il y a de possibilités pour remplir 50 cases avec des rectangles de longueurs 2, 3 et 4 cases, sachant que des cases peuvent rester vides et que l'ordre compte. Par exemple, il y a 15 manières de remplir 5 cases :
+Le principe de ce problème est de remplir un certain nombre de cases avec des rectangles plus ou moins long. Les bleus mesurent 4 de long, les vert 3 et les rouge 2. Une dernière contrainte est imposée : l'ordre compte.
+\newline Prenons 4 cases vides. \, \includegraphics[scale = 0.2]{Images/vide.png} \, On peut choisir de les remplir par "rien". Déjà une possibilité. On peut maintenant choisir de mettre un bleu : \, \includegraphics[scale = 0.2]{Images/bleu.png} \,. Il mesure 4, il prend ainsi toute la place. On veut maintenant placer des verts. On peut les placer de deux manières différentes : \, \includegraphics[scale = 0.2]{Images/vert1.png} \, ou \, \includegraphics[scale = 0.2]{Images/vert2.png} \,. Enfin, il faut placer les rouges. Il y a bien évidement ces dispositions : \, \includegraphics[scale = 0.2]{Images/rouge1.png} \, et \, \includegraphics[scale = 0.2]{Images/rouge2.png} \,. On remarque que l'on peut également mettre 2 rouges à la suite : \, \includegraphics[scale = 0.2]{Images/rouge3.png} \,. Mais étant donné que l'ordre des rectangles compte, la possibilité suivante est aussi bonne \, \includegraphics[scale = 0.2]{Images/rouge4.png} \,. On arrive donc à un bilan de 4 possibilités pour les rouges, 2 pour les verts, 1 pour les bleus et la possibilité vide. Il y a 8 façon de remplir 4 cases, en suivant les contraintes de ce problème.
+\newline Pour donner un autre exemple, il y a 15 manières de remplir 5 cases :
 \bigbreak
 \begin{center}
 \includegraphics[scale = 0.5]{Images/presentation.png}
 \end{center}
 \bigbreak
 
+Le but de problème est de déterminer combien il y a de possibilités de remplir 50 cases.
+\newpage
 \section{Méthodes de réflexion}
 
 \subsection{Première méthode (méthode récursive)}
 
 \subsubsection{Algorithme de principe}
+
+Cet algorithme prend en entrée un entier $n$ (représentant le nombre de cases à remplir), et retourne le nombre de possibilité de remplir les n cases, en respectant les contraintes du problème. Il s'effectue de manière récursive. Pour exemple en rentrant 5, le programme renvoie 15.
+
+\bigbreak
 \lstinputlisting[language=bash]{Algo_de_principe/problem117_1_principe.txt}
 
 \subsubsection{Développement}
@@ -97,6 +106,9 @@ Ceci correspond ainsi à une modélisation de la suite de Tetranacci, une dériv
 \subsection{Seconde méthode (méthode tetranacci)}
 
 \subsubsection{Algorithme de principe}
+
+Cet algorithme prend en entrée un entier $n$ (représentant le nombre de cases à remplir), et retourne le nombre de possibilité de remplir les n cases, en respectant les contraintes du problème. Ici on stocke dans une liste les 4 précédents termes.
+\bigbreak
 \lstinputlisting[language=bash]{Algo_de_principe/problem117_2_principe.txt}
 
 \subsubsection{Développement}
@@ -115,6 +127,9 @@ Après avoir résolu le problème nous nous sommes fixé de nouveau objectifs :
 \section{Méthode finale}
 
 \subsection{Algorithme de principe}
+
+Cet algorithme prend en entrée un entier $n$ (représentant le nombre de cases à remplir), et retourne le nombre de possibilité de remplir les n cases, en respectant les contraintes du problème. On reprend le même principe que l'algorithme précédent, mais on stocke les termes précédents dans des variables.
+\bigbreak
 \lstinputlisting[language=bash]{Algo_de_principe/problem117_3_principe.txt}
 
 \subsection{Développement}

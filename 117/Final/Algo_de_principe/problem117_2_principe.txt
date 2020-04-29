@@ -1,6 +1,6 @@
 Algorithme : Projet Euler, Problème 117, Méthode tetranacci
-Type de Retour : Nombre
-Paramètres : Nombre n
+Paramètres : Nombre n -> le nombre de cases à remplir.
+Type de Retour : Nombre -> le nombre de façon de remplir les n cases.
 
 liste := [0, 0, 0, 1]
 Pour i allant de 4 à n + 4:
