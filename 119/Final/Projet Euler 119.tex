@@ -80,7 +80,7 @@ Le problème 119 du Projet Euler consiste à trouver le 30ème nombre tel que la
 \section{Méthodes de réflexion}
 
 \subsection{Méthode itérative}
-
+Voici les algorithmes de principe d'une méthode itérative permettant de trouver le n-ème nombre respectant les règles du problème précédemment expliquées, ainsi que de la fonction $sommeChiffreNombre$ qui permet de calculer la somme des chiffres d'un nombre. Cette méthode est dite "iérative" car elle itère sur tous les entiers tant qu'on n'a pas trouvé le nombre que l'on recherche :
 \subsubsection{Algorithme de principe}
 \lstinputlisting[language=bash]{Algo_de_principe/problem119_1_principe.txt}
 \lstinputlisting[language=bash]{Algo_de_principe/SommeChiffreNombre.txt}
@@ -92,7 +92,7 @@ Pour trouver le 30ème nombre respectant les règles citées précédemment, il 
 
 
 \subsection{Seconde méthode}
-
+Une autre méthode ne consiste pas à itérer sur les entiers pour vérifier s'ils font partie des nombres recherchés, mais plutôt d'itérer sur de plus petits nombres $a$ et $b$ afin de vérifier si la somme des chiffres de $a^{b}$ est égale à $a$.
 \subsubsection{Algorithme de principe}
 \lstinputlisting[language=bash]{Algo_de_principe/problem119_2_principe.txt}
 
