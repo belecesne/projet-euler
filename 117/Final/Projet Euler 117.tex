@@ -78,7 +78,7 @@
 \section {Présentation}
 
 Le principe de ce problème est de remplir un certain nombre de cases avec des rectangles plus ou moins long. Les bleus mesurent 4 de long, les vert 3 et les rouge 2. Une dernière contrainte est imposée : l'ordre compte.
-\newline Prenons 4 cases vides. \, \includegraphics[scale = 0.2]{Images/vide.png} \, On peut choisir de les remplir par "rien". Déjà une possibilité. On peut maintenant choisir de mettre un bleu : \, \includegraphics[scale = 0.2]{Images/bleu.png} \,. Il mesure 4, il prend ainsi toute la place. On veut maintenant placer des verts. On peut les placer de deux manières différentes : \, \includegraphics[scale = 0.2]{Images/vert1.png} \, ou \, \includegraphics[scale = 0.2]{Images/vert2.png} \,. Enfin, il faut placer les rouges. Il y a bien évidement ces dispositions : \, \includegraphics[scale = 0.2]{Images/rouge1.png} \, et \, \includegraphics[scale = 0.2]{Images/rouge2.png} \,. On remarque que l'on peut également mettre 2 rouges à la suite : \, \includegraphics[scale = 0.2]{Images/rouge3.png} \,. Mais étant donné que l'ordre des rectangles compte, la possibilité suivante est aussi bonne \, \includegraphics[scale = 0.2]{Images/rouge4.png} \,. On arrive donc à un bilan de 4 possibilités pour les rouges, 2 pour les verts, 1 pour les bleus et la possibilité vide. Il y a 8 façon de remplir 4 cases, en suivant les contraintes de ce problème.
+\newline Prenons 4 cases vides. \, \includegraphics[scale = 0.2]{Images/vide.png} \, On peut choisir de les remplir par "rien". Déjà une possibilité. On peut maintenant choisir de mettre un bleu : \, \includegraphics[scale = 0.2]{Images/bleu.png} \,. Il mesure 4, il prend ainsi toute la place. On veut maintenant placer des verts. On peut les placer de deux manières différentes : \, \includegraphics[scale = 0.2]{Images/vert1.png} \, ou \, \includegraphics[scale = 0.2]{Images/vert2.png} \,. Enfin, il faut placer les rouges. Il y a bien évidement ces dispositions : \, \includegraphics[scale = 0.2]{Images/rouge1.png} \, et \, \includegraphics[scale = 0.2]{Images/rouge2.png} \,. On remarque que l'on peut également mettre 2 rouges à la suite : \, \includegraphics[scale = 0.2]{Images/rouge3.png} \,. Mais étant donné que l'ordre des rectangles compte, la possibilité suivante est aussi bonne \, \includegraphics[scale = 0.2]{Images/rouge4.png} \,. On arrive donc à un bilan de 4 possibilités pour les rouges, 2 pour les verts, 1 pour les bleus et la possibilité vide. Il y a 8 façons de remplir 4 cases, en suivant les contraintes de ce problème.
 \newline Pour donner un autre exemple, il y a 15 manières de remplir 5 cases :
 \bigbreak
 \begin{center}
@@ -94,7 +94,7 @@ Le but de problème est de déterminer combien il y a de possibilités de rempli
 
 \subsubsection{Algorithme de principe}
 
-Cet algorithme prend en entrée un entier $n$ (représentant le nombre de cases à remplir), et retourne le nombre de possibilité de remplir les n cases, en respectant les contraintes du problème. Il s'effectue de manière récursive. Pour exemple en rentrant 5, le programme renvoie 15.
+Cet algorithme prend en entrée un entier $n$ (représentant le nombre de cases à remplir), et retourne le nombre de possibilités de remplir les n cases, en respectant les contraintes du problème. Il s'effectue de manière récursive. Pour exemple en rentrant 5, le programme renvoie 15.
 
 \bigbreak
 \lstinputlisting[language=bash]{Algo_de_principe/problem117_1_principe.txt}
@@ -107,7 +107,7 @@ Ceci correspond ainsi à une modélisation de la suite de Tetranacci, une dériv
 
 \subsubsection{Algorithme de principe}
 
-Cet algorithme prend en entrée un entier $n$ (représentant le nombre de cases à remplir), et retourne le nombre de possibilité de remplir les n cases, en respectant les contraintes du problème. Ici on stocke dans une liste les 4 précédents termes.
+Cet algorithme prend en entrée un entier $n$ (représentant le nombre de cases à remplir), et retourne le nombre de possibilités de remplir les n cases, en respectant les contraintes du problème. Ici on stocke dans une liste les 4 précédents termes.
 \bigbreak
 \lstinputlisting[language=bash]{Algo_de_principe/problem117_2_principe.txt}
 
@@ -128,7 +128,7 @@ Après avoir résolu le problème nous nous sommes fixé de nouveau objectifs :
 
 \subsection{Algorithme de principe}
 
-Cet algorithme prend en entrée un entier $n$ (représentant le nombre de cases à remplir), et retourne le nombre de possibilité de remplir les n cases, en respectant les contraintes du problème. On reprend le même principe que l'algorithme précédent, mais on stocke les termes précédents dans des variables.
+Cet algorithme prend en entrée un entier $n$ (représentant le nombre de cases à remplir), et retourne le nombre de possibilités de remplir les n cases, en respectant les contraintes du problème. On reprend le même principe que l'algorithme précédent, mais on stocke les termes précédents dans des variables.
 \bigbreak
 \lstinputlisting[language=bash]{Algo_de_principe/problem117_3_principe.txt}
 
