@@ -24,14 +24,14 @@ def A(max):
     while index != max:                                 # tant qu'on a pas trouvé le nombre que l'on recherche
         decomposition = sommeChiffreNombre(nombreAct)   # on effectue la somme de ses chiffres
         k = 2
-        if decomposition != 1:                          # si la decomposition est égale à 1 (que le nombre de départ était 10, 100, 1000, ...) c'est
+        if decomposition != 1:                          # si "decomposition" est égale à 1 (que le nombre de départ était 10, 100, 1000, ...) c'est
             while 1:                                    # certain que ce nombre ne fonctionne pas
-                puiss = decomposition**k                # on élève decomposition à la puissance k
+                puiss = decomposition**k                # on élève "decomposition" à la puissance "k"
                 if puiss == nombreAct:                  # si le nombre obtenu est égal au nombre de départ alors on a trouvé un nombre de plus répondant
                     index += 1                          # aux critères
-                    valeurRetournee = nombreAct         # on stocke ce nombre là
+                    valeurRetournee = nombreAct         # on stocke ce nombre ci
                     break
-                if puiss > nombreAct:                   # si decomposition ** k est supérieur au nombre de départ, alors ce nombre ne pourra jamais
+                if puiss > nombreAct:                   # si "decomposition ** k" est supérieur au nombre de départ, alors ce nombre ne pourra jamais
                     break                               # répondre aux critères du problèmes
                 k += 1
         nombreAct += 1

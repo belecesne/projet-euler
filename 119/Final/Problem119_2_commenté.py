@@ -26,20 +26,20 @@ def A(n, vMax):
         '''
         a = 2
         aPrevious = aMaximum
-        aMaximum = exp(log(vMax)/2)                    # on borne a grâce à la valeur minimum que b peut prendre (2) et grâce à vMax
-        while a < aMaximum:                            # et on teste ainsi tous les a possibles
+        aMaximum = exp(log(vMax)/2)                    # on borne "a" grâce à la valeur minimum que "b" peut prendre (2) et grâce à "vMax"
+        while a < aMaximum:                            # et on teste ainsi tous les "a" possibles
             if a >= aPrevious:
                 bMinimum = 2
             else:
                 bMinimum = listebMaximum[a]
-            bMaximum = floor(log(vMax) / log(a))+1     # on borne b (les puissances) en fonction de a
+            bMaximum = floor(log(vMax) / log(a))+1     # on borne "b" (les puissances) en fonction de "a"
             listebMaximum[a] = bMaximum
-            for b in range(bMinimum, bMaximum):        # ainsi pour chaque a on fait varier les puissances
-                value = a**b                           # et on stocke dans value
-                if sommeChiffreNombre(value) == a:     # Si a est la somme des chiffres de value alors value est un des nombres qui nous intéresse
+            for b in range(bMinimum, bMaximum):        # ainsi pour chaque "a" on fait varier les puissances
+                value = a**b                           # et on stocke dans "value"
+                if sommeChiffreNombre(value) == a:     # Si "a" est la somme des chiffres de "value" alors "value" est un des nombres qui nous intéresse
                     listeNombre.append(value)          # on l'ajoute donc à notre liste
             a += 1
-        vMax *= 5**ceil((n - len(listeNombre))/2)      # on augmente vMax en fonction de la taille de la liste
+        vMax *= 5**ceil((n - len(listeNombre))/2)      # on augmente "vMax" en fonction de la taille de la liste
     listeNombre.sort()                                 # on trie la liste afin d'obtenir le bon terme recherché
     return listeNombre[n-1]
 
